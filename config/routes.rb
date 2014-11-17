@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  namespace :foo do
+    resources :bars
+  end
+
   get 'home', to: 'home#index'
+  namespace :teacher do
+    resources :teachers 
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
