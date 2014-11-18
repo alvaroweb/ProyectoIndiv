@@ -1,0 +1,9 @@
+<h1>New Teacher</h1>
+
+<% if flash[:error] %>
+	<%= flash[:error] %>
+<%end%>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', home_path %>

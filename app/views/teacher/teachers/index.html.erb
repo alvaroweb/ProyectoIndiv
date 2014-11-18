@@ -1,5 +1,10 @@
 <h1>Hola desde la vista</h1>
-<ol><% @teachers.each do |teacher| %>
+
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<%end%>
+
+<ol><% @teachers.each do |teacher| %>	
 <li><%= link_to teacher.name, teacher_teacher_path(teacher) %>
 <% end %>
 </ol>
