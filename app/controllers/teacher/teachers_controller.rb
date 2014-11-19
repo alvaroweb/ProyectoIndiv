@@ -7,11 +7,11 @@ class Teacher::TeachersController < ApplicationController
 
     def show
     	#render :template => 'show'
-    	@teacher = Teacher.find(params[:id])
     end
 
     def new
     	@teacher = Teacher.new
+        #@teacher = Teacher::Teacher.new
     end
 
     def create
@@ -25,6 +25,22 @@ class Teacher::TeachersController < ApplicationController
     	end
 
     end
+
+    def edit
+        @teacher = Teacher.find(params[:id])
+    end
+
+    def update
+        respond_to do |format|
+      if @teacher.update(teachers_params)
+        format.html { redirect_to teacher_teachers_path, notice: 'Las modificaciones han sido guardadas.' }
+        format.json { render :show, status: :ok, location: @teacher }
+      else
+        format.html { render :edit }
+        format.json { render json: @teacher.errors, status: :unprocessable_entity }
+        end
+    end
+  end
 
     protected
     	def teachers_params

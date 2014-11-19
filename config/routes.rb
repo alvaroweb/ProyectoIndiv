@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'padres/index'
+
+  get 'padres/show'
+
+  get 'padres/new'
+
+  get 'padres/edit'
+
+  get 'padres/create'
+
+  get 'padres/update'
+
+  get 'padres/destroy'
+
   namespace :foo do
     resources :bars
   end

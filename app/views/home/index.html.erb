@@ -8,6 +8,7 @@
 	<div class="background">
 	<nav class="barra">
 		<ul>
+			<audio class = "margAudio" src = "/music/camela.mp3" autoplay controls></audio>
 			<li>INICIO</li>
 			<li>PROFESORES</li>
 			<li>NOSOTROS</li>
@@ -17,7 +18,9 @@
 			<h1 class="tittleCover">ParticularTeacher</h1>
 			<h2 class="subtitlteCover">Primera página on-line que te permite buscar el profesor indicado para tu hijo</h2>
 			<div class="minicontainer">
-				<p class='button1'>Profesor</p>
+				<!--<p class='button1'> Profesor</p>-->
+				<p><%= link_to("Profesor", new_teacher_teacher_path, :class => "button1") %>
+	  		
 				<p class='button2'>Padres/Hijos</p>
 			</div>
 	</header>

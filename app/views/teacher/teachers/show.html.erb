@@ -1,4 +1,12 @@
 <h1>Aula de Profesores</h1>
+
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<%end%>
+
 <%= @teacher.full_name %> (<%= @teacher.phone %>)
+
+<%= link_to 'Edit', edit_teacher_teacher_path %> |
+<%= link_to 'Back', teacher_teachers_path %>
 
 
