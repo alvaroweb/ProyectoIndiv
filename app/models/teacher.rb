@@ -9,6 +9,6 @@ class Teacher < ActiveRecord::Base
   end
 
   def name
-  	attributes['name'].capitalize
+  	attributes['name'] ? attributes['name'].capitalize : ""
   end
 end

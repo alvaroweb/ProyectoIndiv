@@ -1,17 +1,7 @@
 Rails.application.routes.draw do
-  get 'padres/index'
+  resources :subjects
 
-  get 'padres/show'
-
-  get 'padres/new'
-
-  get 'padres/edit'
-
-  get 'padres/create'
-
-  get 'padres/update'
-
-  get 'padres/destroy'
+  resources :padres
 
   namespace :foo do
     resources :bars

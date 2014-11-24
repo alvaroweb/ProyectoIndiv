@@ -1,2 +1,13 @@
-<h1>Padres#index</h1>
-<p>Find me in app/views/padres/index.html.erb</p>
+<h1>Hola desde la vista</h1>
+
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<%end%>
+
+<ol><% @padre.each do |padre| %>	
+<li><%= link_to padre.name, padre_path(padre) %>
+<% end %>
+</ol>
+
+<%= link_to 'New', new_padre_path %> |
+<%= link_to 'Home', home_path %> 

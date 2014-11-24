@@ -1,2 +1,10 @@
-<h1>Padres#show</h1>
-<p>Find me in app/views/padres/show.html.erb</p>
+<h1>Aula de Alumnos</h1>
+
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<%end%>
+
+<%= @padre.full_name %> (<%= @padre.phone %>)
+
+<%= link_to 'Edit', edit_padre_path %> |
+<%= link_to 'Back', padres_path %>

@@ -1,0 +1,16 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.tabla{
+	text-align: center;
+	margin-left: 50px;
+}
+
+.tabla td {
+	padding: 20px;
+}
+
+.tabla th {
+	padding: 20px;
+}

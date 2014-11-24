@@ -2,29 +2,51 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>ParticularTeacher, Baby!!!!!</title>
+	<title>ParticularTeacher!!!!!</title>
 </head>
-<body 
+<body>
+	<header>
 	<div class="background">
 	<nav class="barra">
 		<ul>
-			<audio class = "margAudio" src = "/music/camela.mp3" autoplay controls></audio>
-			<li>INICIO</li>
-			<li>PROFESORES</li>
-			<li>NOSOTROS</li>
+			<!--<audio class = "margAudio" src = "/music/camela.mp3" autoplay controls></audio>-->
+			<li>INICIO</li> |
+			<li>SALA DE PROFESORES</li> |
+			<li><a href="#about">NOSOTROS</a></li> |
+			<li><a href="#contact">CONTACTO</a></li> 
 		</ul>
 	</nav>
-	<header>
+		<div>	
 			<h1 class="tittleCover">ParticularTeacher</h1>
 			<h2 class="subtitlteCover">Primera página on-line que te permite buscar el profesor indicado para tu hijo</h2>
 			<div class="minicontainer">
+				<ul>
 				<!--<p class='button1'> Profesor</p>-->
-				<p><%= link_to("Profesor", new_teacher_teacher_path, :class => "button1") %>
+					<li class="button1"><%= link_to("Profesor", new_teacher_teacher_path) %></li>
 	  		
-				<p class='button2'>Padres/Hijos</p>
+					<li class="button2"><%= link_to("Padres/Hijos", new_padre_path)%></li>
+				</ul>
 			</div>
-	</header>
+		</div>	
 	</div>
+	</header>
+<article>
+	<section>
+		<h1 class="we"><a name="about">¿Quiénes Somos?</a></h1>
+	</section>
+	<img src="/imagen/libro1.jpg" class="abc">		
+	<section>
+		<p class="textwe">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.  No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
+	</section>
+	<img src="/imagen/flecha.png" class="arrow">	
+</article>
+<article>
+	<div class="blackboard">
+	<section>
+		<h1 class="teachers">Sala de Profesores</h1>
+	</section>
+	</div>
+</article>
 		
 </body>
 </html>
