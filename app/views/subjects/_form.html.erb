@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.select(:name, Subject.all.map {|p| [ p.name, p.id] }) %>
   </div>
   <div class="field">
     <%= f.label :schedule %><br>
